@@ -1,0 +1,2743 @@
+/* COPYRIGHT BY The Upland Farm. Powered by Eunie, Allen, Oliver and Christian. (EACO) 2018.*/
+/* DESIGNED BY Eunie, Allen, Oliver and Christian. (EACO) 2018.*/
+
+/************************************************* STYLE AT RESPONSIVE NG SYSTEM (PATI MOBILE COMPABILITY)  *******************************************************/
+
+
+/* #004d00 Theme Color */
+
+/* EACO * EACO * EACO * EACO * EACO * EACO -- SIGN IN ATBP STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+.h5-design {
+  line-height: 28px;
+  margin-bottom: 16px;
+  margin-top: 18px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #004d00;
+  color: #004d00;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  text-align: start!important;
+}
+.signin-wholecontainer{
+  width: 375px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.signin-container{
+  width: 360px;
+  padding: 16px 36px 36px;
+  position: relative;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+}
+.signin-footer{
+  width: 360px;
+  background-color: #004d00;
+  height:40px;
+  margin: 0 auto;
+
+}
+.signin-footer a{
+  color: #fff;
+}
+.signin-footer .left-footer{
+  float:left;
+  margin-top: 9px;
+  margin-left: 12px;
+}
+.signin-footer .right-footer{
+  float: right;
+  margin-right: 12px;
+  margin-top: 9px;
+}
+.signin-footer .center-footer{
+  text-align: center!important;
+  float: left;
+  margin-top: 9px;
+  margin-left: 130px;
+
+}
+
+
+
+/* EACO * EACO * EACO * EACO * EACO * EACO -- END SIGN IN ATBP STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+
+/* EACO * EACO * EACO * EACO * EACO * EACO -- HEADER NAVBAR STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+/************************************************* DESIGN PARA SA LAHAT  *******************************************************/
+
+.nav-max-width{
+    max-width: 820px;
+}
+.scroll-nav-max-width{
+    max-width: 1050px;
+}
+.logoscrolldisplaynone{
+    display: none;
+}
+.logoscrolldisplayblock{
+    display: block;
+}
+.content-design{
+    background-color: #000;
+    overflow:hidden;
+    display:block;
+    position:relative;
+    background-color: #fff;
+}
+.header-design{
+    margin-top: 10px;
+    color: #818182;
+    padding: 10px 10px;
+    line-height: 20px;
+    border-left: 5px solid #004d00;
+}
+.label-design{
+    margin-top:20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #004d00;
+}
+
+/************************************************* END DESIGN PARA SA LAHAT  *******************************************************/
+
+/************************************************* SEARCH BUTTON IN NAVBAR *******************************************************/
+.search-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    height: 55px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-search {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    z-index: 50;
+    width: 302px;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 5px solid #004d00;
+    transition: all 0s ease;
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+}
+.nav-search .searchform {
+    width: 262px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.searchform {
+    position: relative;
+    height: 36px;
+    overflow: hidden;
+}
+/************************************************* END SEARCH BUTTON IN NAVBAR *******************************************************/
+/* EACO * EACO * EACO * EACO * EACO * EACO -- END HEADER NAVBAR STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+/* EACO * EACO * EACO * EACO * EACO * EACO -- DASHBOARD AND OTHERS STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+
+/************************************************* FLASH REPORT IN DASHBOARD *******************************************************/
+
+
+.flashreportcontainer{
+    width: 100%;
+    border-bottom: 2px solid #004d00;
+    margin-bottom: 10px;
+    margin-top: 11px;
+}
+.flashreportlabel{
+    display: inline-block;
+    font-size: 13px;
+    text-transform:uppercase;
+    font-weight:600;
+    background-color: #004d00;
+    color: #fff;
+    height: 30px;
+    float:left;
+}
+.flashreportlabel-p{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+    width:50%;
+}
+#scroller{
+    height:100%;
+    margin:0;
+    padding:0;
+    line-height:30px;
+    position:relative;
+    list-style-type: none;
+    display: inline-block;
+}
+#scroller li{
+    float:left;
+    height:30px;
+    padding:0 0 0 70px;
+    list-style-type: none;
+}
+#scrollerWrapper { 
+    height:30px;
+    overflow:hidden;
+}
+
+
+
+
+/************************************************* END FLASH REPORT IN DASHBOARD *******************************************************/
+
+
+
+/************************************************* CATEGORIES, ARTICLES, ARCHIVES, FORUM IN DASHBOARD *******************************************************/
+.categorycontainer{
+    margin-top: 30px;
+    position: relative;
+    background-color: #fff;
+}
+.categoryname{
+    width: 100%;
+    border-bottom: 2px solid #004d00;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.categoryname-right{
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 6px 0;
+}
+.categoryname-left{
+   color: #a8a8a8;
+   display: inline-block;
+   float: right;
+   margin-top: 6px;
+   padding-top: 6px;
+   text-align: right;
+   font-size: 0.75em;
+   text-transform: uppercase;
+   z-index: 100;
+}
+
+.h6-author{
+    color:#555;
+}
+.h6-date{
+    color:#555;
+    font-size:14px;
+}
+
+
+
+
+/************************************************* END CATEGORIES IN DASHBOARD *******************************************************/
+
+
+
+
+/************************************************* ARTICLE, FORUM, VIDEO PREVIEW *******************************************************/
+
+
+ .preview-row{
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+.categoryname-label{
+    background-color: #004d00;position: relative;
+    color: #ffffff;
+    font-size: 12px;
+    display: inline-block;
+    padding: 0px 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+
+/************************************************* END ARTICLE, FORUM, VIDEO PREVIEW *******************************************************/
+
+/************************************************* RATINGS ARTICLES AND FORUM *******************************************************/
+
+
+form .stars {
+  background: url("../images/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("../images/stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+
+/************************************************* END RATINGS ARTICLES AND FORUM *******************************************************/
+
+
+/* EACO * EACO * EACO * EACO * EACO * EACO -- END DASHBOARD AND OTHERS STYLES  -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+
+
+
+
+
+/* EACO * EACO * EACO * EACO * EACO * EACO --   RESPONSIVE  PARA SA MOBILE, TABLET, ATBP -- * EACO * EACO * EACO * EACO * EACO * EACO */
+
+
+@media only screen and (max-width: 4000px){
+
+    /*SIGN IN*/
+
+    .signin-logo{
+        width:330px;
+        height:50px;
+    }
+
+    .preview-design{
+        float:left;
+        font-size: 14px;
+    }
+    .next-design{
+        float: right;
+        font-size: 14px;
+    }
+    /* NAVBAR */
+
+    .navbar-ul{
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .navbar-li-first{
+        border-top: 0px solid #ffffff21;
+        margin-top: 0px;
+        display:none;
+
+    }
+    .nav-item-2{
+        display:none;
+    }
+    .user-ul-design{
+        width:200px;
+    }
+   
+    .nav-logonone{
+        display: none;
+    }
+    .nav-logoblock{
+        display: none;
+    }
+
+    /* ISSUE LEFT AND RIGHT POSITION*/
+
+    .issueleft{
+        float: left;
+        display: inline;
+        margin-left: 55px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 7px;
+    }
+
+    .searchmobile{
+        display: none;
+    }
+    .searchdesktop{
+        display: block;
+    }
+  
+
+    /* ARTICLES ATBP */
+
+    .article-img-container{ /* for responsive */
+       width: 367px;
+       height: 250px;
+       margin-top: 20px;
+       overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 367px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 600px;
+        min-width: 367px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -10;
+    }
+
+    /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width:367px; 
+        height:250px;
+        margin-top: 20px; 
+        overflow:hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 367px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -10;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width:100%;
+        margin-top: 20px; 
+        overflow:hidden;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 480px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:300px;
+    }
+    .announcement-item{
+        height:300px;
+    }
+    .latestissue-img{
+        width:100%;
+        height:480px;
+    }
+
+    /* VIDEOS */
+
+    .videos-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+
+    .carousel-item > img {
+      max-width: 800px;
+      min-height: 300px;
+      max-height: 350px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0 0 0 -20;
+      min-width: 300px;
+    }
+
+    .issue-font-design{
+        font-size: 14px;
+    }
+}
+
+
+@media only screen and (max-width: 1125px){
+    
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -50;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -25;
+    }
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -50;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -25;
+    }
+    .archive-img-container{
+        width:100%;
+        margin-top: 20px; 
+        overflow:hidden;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:300px;
+    }
+    .announcement-item{
+        height:300px;
+    }
+    .latestissue-img{
+        width:100%;
+        height:450px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 1023px){
+    
+
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -60;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -45;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 375px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -20;
+
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width:100%;
+        height: 390px;
+    }
+
+    /* FORUM */
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -50;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -45;
+    }
+    .carousel-item > img {
+        max-width: 800px;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -20;
+        min-width: 300px;
+    }
+
+
+}
+@media only screen and (max-width: 994px){
+
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 220px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -60;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 200px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -25;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 375px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width:100%;
+        height:375px;
+    }
+
+   
+}
+
+@media only screen and (max-width: 767px){
+ 
+    /* ISSUE LEFT AND RIGHT POSITION*/
+    .navbar-ul{
+        font-size: 12px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .navbar-li-first{
+        border-top: 1px solid #ffffff21;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        display: block;
+
+    }
+   .li-design{
+        margin-left: 5px;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .nav-li-align{
+        text-align: center;
+    }
+    .user-ul-design{
+        width:150px;
+    }
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 28%;
+    }
+
+    header{
+        display: none;
+    }
+    .nav-item-2{
+        display:block;
+    }
+
+    .searchmobile{
+        display: block;
+    }
+    
+    .searchdesktop{
+        display: none;
+    }
+
+    .nav-img{
+        display: none;
+    }
+
+    .nav-logonone{
+        display: none;
+    }
+    .nav-logoblock{
+        display: block;
+        margin-left: 40px;
+        width:210px;
+        height:35px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 300px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 220px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -60;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 200px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 100%;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 100%;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -30 0 0 0;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 375px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -23 0 0 -5;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 60%;
+        height: 550px;
+    }
+
+
+}
+@media only screen and (max-width: 685px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 220px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 200px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -20;    
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -30 0 0 -30;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 350px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 380px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 250px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -21 0 0 -20;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 70%;
+        height: 570px;
+    }
+    /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 25%;
+    }
+
+}
+@media only screen and (max-width: 600px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 220px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 200px;
+        max-height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -28;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -30 0 0 -80;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 300px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 440px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 380px;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -50 0 0 -50;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 80%;
+        height: 575px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 22%;
+    }
+ 
+}
+@media only screen and (max-width: 575px){
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 350px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 800px;
+        min-width: 360px;
+        min-height: 350px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -80;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 800px;
+        min-width: 550px;
+        min-height: 350px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 600px;
+        min-width: 220px;
+        min-height: 350px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -40;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 350px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 800px;
+        min-width: 360px;
+        min-height: 350px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 600px;
+        min-width: 220px;
+        min-height: 350px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -40;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 600px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 660px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 21%;
+    }
+}
+/* OTHER SMARTPHONE
+504px
+*/
+@media only screen and (max-width: 504px){
+
+   .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 300px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 800px;
+        min-width: 500px;
+        min-height: 300px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 500px;
+        min-width: 220px;
+        min-height: 300px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -20;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 300px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 300px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 600px;
+        min-width: 220px;
+        min-height: 300px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -73;    
+    
+    }
+
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 550px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -10 0 0 0;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 580px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 16%;
+    }
+  
+}
+@media only screen and (max-width: 479px){
+   .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 280px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -120;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 700px;
+        min-width: 450px;
+        min-height: 280px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 500px;
+        min-width: 220px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -35;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 280px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 700px;
+        min-width: 360px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -120;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 600px;
+        min-width: 220px;
+        min-height: 300px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -10 0 0 -94;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 520px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -20 0 0 0;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 540px;    
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 14%;
+    }
+}
+/*
+ OTHER SMARTPHONES
+432px
+*/
+@media only screen and (max-width: 432px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 280px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 600px;
+        min-width: 360px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 600px;
+        min-width: 450px;
+        min-height: 280px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 450px;
+        min-width: 220px;
+        min-height: 260px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -33;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 280px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 600px;
+        min-width: 360px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -70;
+    }
+    
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 500px;
+        min-width: 220px;
+        min-height: 280px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -68;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 450px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 400px;
+        min-width: 100%;
+        min-height: 300px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -10 0 0 -12;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:340px;
+    }
+    .announcement-item{
+        height:340px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 480px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 11%;
+    }
+
+}
+
+/*
+ OTHER SMARTPHONES
+414px
+*/
+
+@media only screen and (max-width: 414px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -65;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 450px;
+        min-height: 250px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -18;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 500px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -5 0 0 -68;
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 420px;    
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 400px;
+        min-width: 100%;
+        min-height: 250;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -25 0 0 -22;
+
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:310px;
+    }
+    .announcement-item{
+        height:310px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 460px;
+
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 9%;
+    }
+}
+/*
+ OTHER SMARTPHONES
+400px
+*/
+@media only screen and (max-width: 400px){
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -75;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 500px;
+        min-width: 450px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -25;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -25;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 420px;    
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -20 0 0 -5;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:310px;
+    }
+    .announcement-item{
+        height:310px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 440px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 6%;
+    }
+}
+/*
+ OTHER SMARTPHONES
+390px
+*/
+@media only screen and (max-width: 390px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -80;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -30;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -30;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 420px;    
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 400px;
+        max-height: 750px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -20 0 0 -8;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:310px;
+    }
+    .announcement-item{
+        height:310px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 425px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 5%;
+    }
+   
+}
+/*
+ OTHER SMARTPHONES
+384px
+*/
+@media only screen and (max-width: 384px){
+
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -80;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -32;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -35;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 410px;    
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        max-height: 415px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -20 0 0 -11;
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:310px;
+    }
+    .announcement-item{
+        height:310px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 420px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 5%;
+    }
+   
+}
+/*
+Apple iPhone 6, 6, 7, 8 AND OTHER SMARTPHONES
+375px
+*/
+@media only screen and (max-width: 375px){
+    .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -80;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 250px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -36;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -37;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 410px;    
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        max-height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 350px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -20 0 0 -15;
+
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:350px;
+    }
+    .announcement-item{
+        height:350px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 410px;
+
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 350px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 3%;
+    }
+
+}
+
+/*
+SAMSUNG, LG, IPHONE 4 AND SMALLER SMARTPHONES
+360px
+*/
+@media only screen and (max-width: 360px){
+    /* SIGN IN */
+     .signin-wholecontainer{
+      width: 320px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .signin-container{
+        width: 320px;
+        padding: 16px 25px 25px;
+        position: relative;
+        background-color: #F7F7F7;
+        margin: 0 auto;
+    }
+    .signin-footer{
+      width: 320px;
+      background-color: #004d00;
+      height:40px;
+      margin: 0 auto;
+
+    }
+    .signin-footer .center-footer {
+        text-align: center!important;
+        float: left;
+        margin-top: 9px;
+        margin-left: 110px;
+    }
+    .signin-logo{
+        width:320px;
+        height:42px;
+    }
+    /* NAVBAR */
+    .nav-logoblock{
+        display: block;
+        margin-left: 23px;
+        width:210px;
+        height:35px;
+    }
+    .nav-360{
+        margin-right: -10px;
+    }
+
+    /* DASHBOARD */
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -90;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 220px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -20;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -45;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 380px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        max-height: 380px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 400px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -40 0 0 -40;
+
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:360px;
+    }
+    .announcement-item{
+        height:360px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 380px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 360px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: 0;
+    }
+
+}
+
+/*
+IPHONE 4 AND SMALLER SMARTPHONES
+320px
+*/
+
+@media only screen and (max-width: 320px){ 
+    .signin-wholecontainer{
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 100px;
+    }
+    .signin-container{
+        width: 300px;
+        padding: 16px 25px 25px;
+        position: relative;
+        background-color: #F7F7F7;
+        margin: 0 auto;
+    }
+    .signin-footer{
+      width: 300px;
+      background-color: #004d00;
+      height:40px;
+      margin: 0 auto;
+
+    }
+    .signin-footer .center-footer {
+        text-align: center!important;
+        float: left;
+        margin-top: 9px;
+        margin-left: 100px;
+    }
+    .signin-logo{
+        width:300px;
+        height:42px;
+    }
+
+    /* NAVBAR */
+    .nav-logoblock{
+        display: block;
+        margin-left: -1px;
+        width: 200px;
+        height: 33px;
+    }
+    .nav-360{
+        margin-right: -10px;
+    }
+
+    /* DASHBOARD */
+     .article-img-container{ /* for responsive */
+        width: 100%;
+        height: 220px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .article-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -100;
+    }
+    .article-with-img2{ /* for responsive -- kapag may picture -- editorial */ 
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 230px;
+        max-height: 600px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    .article-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 350px;
+        min-width: 220px;
+        min-height: 220px;
+        max-height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -30px;
+    }
+
+     /*Forum sa gilid ng dashboard*/
+
+    .forum-img-container{ /* for responsive */
+        width: 100%;
+        height: 230px;
+        margin-top: 20px;
+        overflow: hidden;
+    }
+    .forum-with-img{ /* for responsive -- kapag may picture */ 
+        max-width: 500px;
+        min-width: 360px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -55;
+    }
+    .forum-without-img{ /* for responsive -- kapag wala picture */ 
+        max-width: 400px;
+        min-width: 220px;
+        min-height: 230px;
+        max-height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 -58;
+
+    }
+
+    /* ARCHIVES*/
+
+    .archive-img-container{
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        height: 360px;
+    }
+    .archive-with-img{
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 350px;
+        max-height: 380px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+    }
+    
+    /* VIDEOS*/
+
+    .videos-with-img {
+        max-width: 400px;
+        min-width: 100%;
+        min-height: 230px;
+        max-height: 350px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: -40 0 0 -60;
+
+    }
+
+    /* ANNOUNCEMENT*/
+
+    .announcement-inner{
+        height:370px;
+    }
+    .announcement-item{
+        height:370px;
+    }
+    .latestissue-img{
+        width: 100%;
+        height: 360px;
+    }
+    .carousel-item > img {
+        max-width: 100%;
+        min-height: 370px;
+        max-height: 1100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 0 0 0;
+        min-width: 100%;
+    }
+      /* NAVBAR*/
+    .user-ul-design2{
+        list-style-type: none;
+        margin-left: -15px;
+    }
+    .li-design{
+        margin-left: 5px;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .issue-font-design{
+        font-size: 13px;
+    }
+    .preview-design{
+        float:left;
+        font-size: 13px;
+    }
+    .next-design{
+        float: right;
+        font-size: 13px;
+    }
+
+}
+
+
+}
+
+/* EACO * EACO * EACO * EACO * EACO * EACO --   END RESPONSIVE  PARA SA MOBILE, TABLET, ATBP -- * EACO * EACO * EACO * EACO * EACO * EACO */
+/* COPYRIGHT BY The Upland Farm. Powered by Eunie, Allen, Oliver and Christian. (EACO) 2018.*/
+/* DESIGNED BY Eunie, Allen, Oliver and Christian. (EACO) 2018.*/
