@@ -25,6 +25,7 @@
     .card-body {
       background-color: #fff;
       color: #000;
+      border-radius: 1rem;
     }
 
     .form-label {
@@ -51,7 +52,7 @@
           <div class="card">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/JfPulilan9077Crossingfvf_02.JPG" alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem; height: 465px; width: 650px;" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5">
