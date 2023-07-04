@@ -177,7 +177,7 @@ function showNavItem($requiredRole, $userRole) {
       <img src="https://www.mercurydrug.com/public/images/md-main-logo.png" alt="Mercury Drug Store Logo">
     </a>
     <div class="logout-container">
-      <p class="username">Logged in: <?php echo $username; ?></p>
+      <p class="username"><i class="fas fa-user"></i>-<?php echo $username; ?>-</p>
       <a href="login" class="btn btn-dark logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
   </nav>
@@ -238,7 +238,7 @@ function showNavItem($requiredRole, $userRole) {
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Purchase Management</a>
             <ul class="sub-nav">
-              <li><a href="#"><i class="fas fa-tasks"></i> Manage Purchase</a></li>
+              <li><a href="purchase"><i class="fas fa-tasks"></i> Manage Purchase</a></li>
              
                 <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
         
@@ -250,8 +250,8 @@ function showNavItem($requiredRole, $userRole) {
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-boxes"></i> Inventory Management</a>
             <ul class="sub-nav">
-              <li><a href="#"><i class="fas fa-box"></i> New Arrival</a></li>
-              <li><a href="#"><i class="fas fa-cogs"></i> Manage Stock</a></li>
+              <li><a href="n_arrival"><i class="fas fa-box"></i> New Arrivals</a></li>
+              <li><a href="product"><i class="fas fa-cogs"></i>All Products</a></li>
             </ul>
           </li>
         <?php endif; ?>

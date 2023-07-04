@@ -177,7 +177,7 @@ function showNavItem($requiredRole, $userRole) {
       <img src="https://www.mercurydrug.com/public/images/md-main-logo.png" alt="Mercury Drug Store Logo">
     </a>
     <div class="logout-container">
-    <p class="username"><i class="fas fa-user"></i>-<?php echo $username; ?>-</p>
+      <p class="username"><i class="fas fa-user"></i>-<?php echo $username; ?>-</p>
       <a href="login" class="btn btn-dark logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
   </nav>
@@ -250,8 +250,8 @@ function showNavItem($requiredRole, $userRole) {
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-boxes"></i> Inventory Management</a>
             <ul class="sub-nav">
-              <li><a href="n_arrival"><i class="fas fa-box"></i> New Arrival</a></li>
-              <li><a href="product"><i class="fas fa-cogs"></i> All Products</a></li>
+              <li><a href="n_arrival"><i class="fas fa-box"></i> New Arrivals</a></li>
+              <li><a href="#"><i class="fas fa-cogs"></i>All Products</a></li>
             </ul>
           </li>
         <?php endif; ?>
@@ -261,164 +261,77 @@ function showNavItem($requiredRole, $userRole) {
 
     </nav>
 
-   
-<div class="content">
-<h1>Manage Users</h1>
-  <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal">+ Add New</button>
-  <br /><br />
-  <table class="table table-bordered table-striped">
+    <div class="content">
+    <?php
+// Load the Product_Model
+$this->load->model('Product_Model');
+
+// Get the products based on the select option
+$filter = isset($_POST['filter']) ? $_POST['filter'] : 'all';
+$products = $filter === 'lowStock' ? $this->Product_Model->get_lowStock() : $this->Product_Model->get_products();
+?>
+
+<h1 class="welcome-message"><?php echo $filter === 'lowStock' ? 'Low on Stock Products' : 'All Products'; ?></h1>
+<br />
+<a href="<?php echo site_url('i_records'); ?>">
+<button class="btn btn-primary">Inventory Records</button>
+</a>
+
+<br /><br />
+<form action="" method="POST">
+  <label for="filter">Filter:</label>
+  <select id="filter" name="filter">
+    <option value="all" <?php echo $filter === 'all' ? 'selected' : ''; ?>>Show All</option>
+    <option value="lowStock" <?php echo $filter === 'lowStock' ? 'selected' : ''; ?>>Low Stock</option>
+  </select>
+  <!-- <?php if ($filter === 'lowStock'): ?>
+    <button type="submit" name="report" class="btn btn-primary">Report</button>
+  <?php endif; ?> -->
+</form>
+
+<table class="table table-bordered table-striped">
   <thead class="thead-dark">
     <tr>
-      <th>User ID</th>
-      <th>Username</th>
-      <th>Password</th>
-      <th>Role</th>
-      <th>Date Created</th>
-      <th>Action</th>
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Date Received</th>
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($users as $user): ?>
+    <?php foreach ($products as $prod): ?>
       <tr>
-        <td><?php echo $user->userid; ?></td>
-        <td><?php echo $user->username; ?></td>
-        <td><?php echo $user->password; ?></td>
-        <td><?php echo $user->user_role; ?></td>
-        <td><?php echo $user->date_created; ?></td>
-        <td>
-        <button class="btn btn-primary btn-sm edit-button" data-toggle="modal" data-target="#editModal" data-userid="<?php echo $user->userid; ?>" data-username="<?php echo $user->username; ?>" data-password="<?php echo $user->password; ?>" data-userrole="<?php echo $user->user_role; ?>">Edit</button>
-        </td>
+        <td><?php echo $prod->p_id; ?></td>
+        <td><?php echo $prod->p_name; ?></td>
+        <td><?php echo $prod->price; ?></td>
+        <td><?php echo $prod->stock; ?></td>
+        <td><?php echo $prod->date_recieved; ?></td>
       </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
 
+<!-- <?php if ($filter === 'lowStock' && isset($_POST['report'])): ?>
+  <h3>Low Stock Report</h3>
+  <p>Include your report generation logic or display a message indicating the report has been generated.</p>
+<?php endif; ?> -->
 
- <!-- Add User Modal -->
-<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addModalLabel">Add New User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="<?php echo site_url('user/add'); ?>" method="post">
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" required>
-          </div>
-          <div class="form-group">
-            <label for="user_role">Role</label>
-            <select class="form-control" id="user_role" name="user_role" required>
-              <option value="">Select Role</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Cashier">Cashier</option>
-              <option value="Pharmacist">Pharmacist</option>
-              <option value="Employee">Employee</option>
-              <option value="Accountant">Accountant</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="date_created">Date Created</label>
-            <input type="text" class="form-control" id="date_created" name="date_created" value="<?php echo date('Y-m-d H:i:s'); ?>" readonly>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" name="save_user">Save</button>
-          </div>
-        </form>
-      </div>
+
     </div>
   </div>
-</div>
-
-<!-- Edit User Modal -->
-<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="editModalLabel">Edit User</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form method="POST" action="<?php echo site_url('user/update'); ?>">
-          <div class="form-group">
-            <label for="userid">User ID</label>
-            <input type="text" class="form-control" id="userid" name="userid" readonly>
-          </div>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username">
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="text" class="form-control" id="password" name="password">
-          </div>
-          <div class="form-group">
-            <label for="user_role">User Role</label>
-            <select class="form-control" id="user_role" name="user_role">
-              <option value="Employee">Employee</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Pharmacist">Pharmacist</option>
-              <option value="Cashier">Cashier</option>
-              <option value="Accountant">Accountant</option>
-            </select>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" name="update_user">Update</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div>
-
-  <!-- Modal Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
-
 
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+
   <script>
-  $(document).ready(function() {
-    $('.edit-button').click(function() {
-      var button = $(this);
-      var userId = button.data('userid');
-      var username = button.data('username');
-      var password = button.data('password');
-      var userRole = button.data('userrole');
-
-      console.log(userId);
-      console.log(username);
-      console.log(password);
-      console.log(userRole);
-
-      $('#editModal #userid').val(userId);
-      $('#editModal #username').val(username);
-      $('#editModal #password').val(password);
-      $('#editModal #user_role').val(userRole);
-
-      $('#editModal').modal('show'); // Show the modal
-    });
+  document.getElementById('filter').addEventListener('change', function() {
+    this.parentNode.submit();
   });
 </script>
-
 </body>
+
 
 </html>

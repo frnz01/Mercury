@@ -19,8 +19,6 @@ class Login extends CI_Controller {
         $user = $this->Login_model->get_user($username, $password);
 
         If($user){
-            //check if admin
-            // if($user->user_role === 'Administrator'){
                 $userdata = array (
                     'userid' => $user->userid,
                     'username' => $user->username,
@@ -30,7 +28,6 @@ class Login extends CI_Controller {
                 );
                 $this->session->set_userdata('user', $userdata);
                 redirect('dashboard');
-            // }
            
         }else{
             $data['error'] = 'Invalid username or password';
