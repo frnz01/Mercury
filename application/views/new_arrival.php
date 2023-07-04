@@ -240,7 +240,7 @@ function showNavItem($requiredRole, $userRole) {
             <ul class="sub-nav">
               <li><a href="purchase"><i class="fas fa-tasks"></i> Manage Purchase</a></li>
              
-                <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
+                <li><a href="p_record"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
         
             </ul>
           </li>

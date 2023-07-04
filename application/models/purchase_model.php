@@ -5,10 +5,11 @@ class Purchase_Model extends CI_model{
     public function get_lowStock(){
         $this->db->select('*');
         $this->db->from('tbl_products');
-        $this->db->where('stock <= 10');
+        $this->db->where('stock <=', 10);
+        $this->db->where('ordered !=', 'yes');
         $query = $this->db->get();
         return $query->result();
-    }
+    }    
 
     public function create_purchase($username, $p_id, $p_name, $p_price, $quantity, $supplier, $date_purchase, $total)
     {
@@ -43,14 +44,29 @@ class Purchase_Model extends CI_model{
     
 
     public function update_status($p_id)
-{
-    $data = array(
+    {
+        $data = array(
         'status' => 'Complete'
     );
 
-    $this->db->where('p_id', $p_id);
-    $this->db->update('inventory', $data);
-}
+        $this->db->where('p_id', $p_id);
+        $this->db->update('inventory', $data);
+    }
+
+    public function remove_product($p_id)
+    {
+        $this->db->where('p_id', $p_id);
+        $this->db->update('tbl_products', array('ordered' => 'yes'));
+    }
+
+    public function get_records(){
+        $this->db->select('*');
+        $this->db->from('purchase');
+        $this->db->order_by('date_purchase', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }    
+
     
     
 }

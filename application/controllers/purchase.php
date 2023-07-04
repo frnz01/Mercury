@@ -32,6 +32,9 @@ class Purchase extends CI_Controller {
             $data['date_purchase'],
             $data['total']
         );
+        $p_id = $this->input->post('p_id');
+        $this->Purchase_Model->remove_product($p_id);
+
         $this->session->set_flashdata('purchase_success', true);
         redirect('purchase');
     }

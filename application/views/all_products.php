@@ -205,7 +205,7 @@ function showNavItem($requiredRole, $userRole) {
              
               <li><a href="#"><i class="fas fa-chart-line"></i> Sales Record</a></li>
              
-                <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
+                <li><a href="p_record"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
             
               
                 <li><a href="#"><i class="fas fa-box-open"></i> Inventory Record</a></li>
