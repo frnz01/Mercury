@@ -20,14 +20,16 @@
     }
 
     .sidebar {
-      background-color: #fff;
-      color: #000;
+      background-color: #222222;
+      color: #ffffff;
       height: 100vh;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 80px;
+      position: fixed;
     }
 
     .sidebar .nav-link {
-      color: #000;
+      color: #ffffff;
       transition: background-color 0.3s ease;
     }
 
@@ -36,11 +38,11 @@
     }
 
     .sidebar .nav-link:hover {
-      background-color: #EBEBEB;
+      background-color: #333333;
     }
 
     .sidebar .nav-link.active {
-      background-color: #B8B8B8;
+      background-color: #1e7e34;
       font-weight: bold;
     }
 
@@ -51,7 +53,7 @@
       top: 0;
       height: 100%;
       width: 5px;
-      background-color: #000;
+      background-color: #ffffff;
     }
 
     .sidebar .nav-item:hover .sub-nav {
@@ -66,17 +68,21 @@
     }
 
     .sidebar .sub-nav li a {
-      color: #000;
+      color: #ffffff;
       transition: background-color 0.3s ease;
     }
 
     .sidebar .sub-nav li a:hover {
-      background-color: #EBEBEB;
+      background-color: #333333;
     }
 
     .content {
-      margin-left: 250px;
+      margin-left: 350px;
       padding: 20px;
+      margin-top: 100px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
 
     .logout-button {
@@ -86,8 +92,13 @@
     }
 
     .navbar {
-      background-color: #fff;
-      color: #000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      background-color: #ffffff;
+      color: #000000;
       padding: 10px;
       display: flex;
       justify-content: space-between;
@@ -96,7 +107,7 @@
     }
 
     .navbar-brand {
-      color: #000;
+      color: #000000;
       font-weight: bold;
       font-size: 1.5rem;
     }
@@ -106,7 +117,7 @@
     }
 
     .username {
-      color: #000;
+      color: #000000;
       font-weight: bold;
       margin-right: 10px;
     }
@@ -126,33 +137,32 @@
       font-size: 1.5rem;
     }
 
-    /* Sub-nav styling */
     .sub-nav {
-    display: none;
-    padding-left: 20px;
-  }
+      display: none;
+      padding-left: 20px;
+    }
 
-  .nav-item:hover .sub-nav {
-    display: block;
-  }
+    .nav-item:hover .sub-nav {
+      display: block;
+    }
 
-  .sub-nav li a {
-    display: flex;
-    align-items: center;
-    color: #000;
-    transition: background-color 0.3s ease;
-    padding: 5px;
-    font-size: 14px;
-    text-decoration: none; 
-  }
+    .sub-nav li a {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      transition: background-color 0.3s ease;
+      padding: 5px;
+      font-size: 14px;
+      text-decoration: none;
+    }
 
-  .sub-nav li a:hover {
-    background-color: #EBEBEB;
-  }
+    .sub-nav li a:hover {
+      background-color: #333333;
+    }
 
-  .sub-nav li a i {
-    margin-right: 10px;
-  }
+    .sub-nav li a i {
+      margin-right: 10px;
+    }
   </style>
 
 
@@ -218,8 +228,8 @@ function showNavItem($requiredRole, $userRole) {
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Accounting</a>
             <ul class="sub-nav">
-              <li><a href="#"><i class="fas fa-credit-card"></i> Payment</a></li>
-              <li><a href="#"><i class="fas fa-file-alt"></i> Financial Records</a></li>
+              <li><a href="payment"><i class="fas fa-credit-card"></i> Payment</a></li>
+              <li><a href="f_record"><i class="fas fa-file-alt"></i> Financial Records</a></li>
             </ul>
           </li>
         <?php endif; ?>
@@ -228,7 +238,7 @@ function showNavItem($requiredRole, $userRole) {
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
             <ul class="sub-nav">
-              <li><a href="#"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
+              <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
               <li><a href="#"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
             </ul>
           </li>
@@ -328,11 +338,8 @@ function showNavItem($requiredRole, $userRole) {
             <label for="supplier">Supplier</label>
             <select class="form-control" id="supplier" name="supplier" required>
               <option value="">Select Supplier</option>
-              <option value="DOH">DOH</option>
-              <option value="Medicine.INC">Medicine.INC</option>
-              <option value="Drug Syndicate">Drug Syndicate</option>
-              <option value="Alcohol Corporation">Alcohol Corporation</option>
-              <option value="Drug Store">Drug Store</option>
+              <option value="ABC Corporation">ABC Corporation</option>
+              <option value="XYZ Corporation">XYZ Corporation</option>
             </select>
           </div>
           <div class="form-group">

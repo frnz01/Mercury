@@ -36,7 +36,7 @@ class Purchase_Model extends CI_model{
         $this->db->join('inventory', 'purchase.p_id = inventory.p_id');
         // $this->db->where('DATE(purchase.date_purchase)', $currentDate);
         $this->db->where('purchase.payment', 'Paid');
-        $this->db->where('inventory.status', 'Incomplete');
+        $this->db->where('inventory.status', 'Not Check');
         
         $query = $this->db->get();
         return $query->result();

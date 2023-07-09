@@ -267,43 +267,42 @@ function showNavItem($requiredRole, $userRole) {
         <?php endif; ?>
       </ul>
     </div>
+ 
 
 
     </nav>
 
     <div class="content">
-      <h1 class="welcome-message">Purchase Records</h1>
+      <h1 class="welcome-message">Financial Records</h1>
       <table class="table table-bordered table-striped">
-  <thead class="thead-dark">
-    <tr>
-      <th>Username</th>
-      <th>Product ID</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Supplier</th>
-      <th>Date Purchased</th>
-      <th>Total</th>
-      <th>Payment Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($products as $prod): ?>
-      <tr>
-        <td><?php echo $prod->username; ?></td>
-        <td><?php echo $prod->p_id; ?></td>
-        <td><?php echo $prod->p_name; ?></td>
-        <td><?php echo $prod->p_price; ?></td>
-        <td><?php echo $prod->quantity; ?></td>
-        <td><?php echo $prod->supplier; ?></td>
-        <td><?php echo $prod->date_purchase; ?></td>
-        <td><?php echo $prod->total; ?></td>
-        <td><?php echo $prod->payment; ?></td>
-      </tr>
-    <?php endforeach; ?>
-  </tbody>
+    <thead class="thead-dark">
+        <tr>
+            <th>Record ID</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Supplier</th>
+            <th>Total</th>
+            <th>Date of Payment</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($products as $prod) : ?>
+            <tr>
+                <td><?php echo $prod->payment_id; ?></td>
+                <td><?php echo $prod->p_id; ?></td>
+                <td><?php echo $prod->p_name; ?></td>
+                <td><?php echo $prod->p_price; ?></td>
+                <td><?php echo $prod->quantity; ?></td>
+                <td><?php echo $prod->supplier; ?></td>
+                <td style="color: #FF6B6B;"><?php echo $prod->total; ?></td>
+                <td><?php echo $prod->payment_date; ?></td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
 </table>
-      
+
     </div>
   </div>
 
