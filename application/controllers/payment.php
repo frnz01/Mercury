@@ -60,10 +60,9 @@ class Payment extends CI_Controller {
     
       redirect('payment');
     }
+
     
 
 
-    
-    
 }
 ?>

@@ -255,44 +255,37 @@ function showNavItem($requiredRole, $userRole) {
         <?php endif; ?>
       </ul>
     </div>
+ 
 
 
     </nav>
 
     <div class="content">
-    <h1 class="welcome-message">New Arrivals</h1>
-      <!-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addModal">+ Add New Purchase</button> -->
-      <table class="table table-bordered table-striped">
-  <thead class="thead-dark">
-    <tr>
-      <th>Product ID</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Supplier</th>
-      <th>Date Purchased</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach ($products as $prod): ?>
-      <tr>
-        <td><?php echo $prod->p_id; ?></td>
-        <td><?php echo $prod->p_name; ?></td>
-        <td><?php echo $prod->p_price; ?></td>
-        <td><?php echo $prod->quantity; ?></td>
-        <td><?php echo $prod->supplier; ?></td>
-        <td><?php echo $prod->date_purchase; ?></td>
-        <td>
-        <form action="<?php echo site_url('purchase/update'); ?>" method="post">
-            <input type="hidden" name="p_id" value="<?php echo $prod->p_id; ?>">
-            <button class="btn btn-primary btn-sm purchase-button" type="submit">Confirm</button>
-          </form>
-        </td>
-      </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
+      <h1 class="welcome-message">Sales Report</h1>
+      <table class="table table-bordered table-striped" id="product-table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Customer</th>
+              <th>Cashier</th>
+              <th>Order Amount</th>
+              <th>Payment</th>
+              <th>Change</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($reports as $rep): ?>
+              <tr>
+                <td><?php echo $rep->customer; ?></td>
+                <td><?php echo $rep->cashier; ?></td>
+                <td><?php echo $rep->total_amount; ?></td>
+                <td><?php echo $rep->payment; ?></td>
+                <td><?php echo $rep->change; ?></td>
+                <td><?php echo $rep->date; ?></td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
     </div>
   </div>
 

@@ -1,3 +1,30 @@
+<?php
+ 
+$dataPoints = array(
+	array("label"=> 1997, "y"=> 254722.1),
+	array("label"=> 1998, "y"=> 292175.1),
+	array("label"=> 1999, "y"=> 369565),
+	array("label"=> 2000, "y"=> 284918.9),
+	array("label"=> 2001, "y"=> 325574.7),
+	array("label"=> 2002, "y"=> 254689.8),
+	array("label"=> 2003, "y"=> 303909),
+	array("label"=> 2004, "y"=> 335092.9),
+	array("label"=> 2005, "y"=> 408128),
+	array("label"=> 2006, "y"=> 300992.2),
+	array("label"=> 2007, "y"=> 401911.5),
+	array("label"=> 2008, "y"=> 299009.2),
+	array("label"=> 2009, "y"=> 319814.4),
+	array("label"=> 2010, "y"=> 357303.9),
+	array("label"=> 2011, "y"=> 353838.9),
+	array("label"=> 2012, "y"=> 288386.5),
+	array("label"=> 2013, "y"=> 485058.4),
+	array("label"=> 2014, "y"=> 326794.4),
+	array("label"=> 2015, "y"=> 483812.3),
+	array("label"=> 2016, "y"=> 254484)
+);
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,6 +110,7 @@
       background-color: #ffffff;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+      width: 70%;
     }
 
     .logout-button {
@@ -164,7 +192,41 @@
       margin-right: 10px;
     }
   </style>
-
+<script>
+window.onload = function () {
+ 
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	//theme: "light2",
+	title:{
+		text: "Salmon Production - 1997 to 2006"
+	},
+	axisX:{
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true
+		}
+	},
+	axisY:{
+		title: "in Metric Tons",
+		includeZero: true,
+		crosshair: {
+			enabled: true,
+			snapToDataPoint: true
+		}
+	},
+	toolTip:{
+		enabled: false
+	},
+	data: [{
+		type: "area",
+		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
+	}]
+});
+chart.render();
+ 
+}
+</script>
 
 </head>
 
@@ -209,18 +271,6 @@ function showNavItem($requiredRole, $userRole) {
         <?php if ($userRole === 'Administrator' || $userRole === 'Employee') : ?>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Data Analytics</a>
-            <ul class="sub-nav">
-              
-                <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Accounting Record</a></li>
-             
-              <li><a href="#"><i class="fas fa-chart-line"></i> Sales Record</a></li>
-             
-                <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
-            
-              
-                <li><a href="#"><i class="fas fa-box-open"></i> Inventory Record</a></li>
-             
-            </ul>
           </li>
         <?php endif; ?>
 
@@ -239,7 +289,7 @@ function showNavItem($requiredRole, $userRole) {
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
             <ul class="sub-nav">
               <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
-              <li><a href="#"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
+              <li><a href="sales_rep"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
             </ul>
           </li>
         <?php endif; ?>
@@ -273,8 +323,8 @@ function showNavItem($requiredRole, $userRole) {
     </nav>
 
     <div class="content">
-      <h1 class="welcome-message">Welcome to the Admin Dashboard!</h1>
-      <!-- Add your dashboard content here -->
+      <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+      <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     </div>
   </div>
 

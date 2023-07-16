@@ -210,18 +210,6 @@
                     <?php if ($userRole === 'Administrator' || $userRole === 'Employee') : ?>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Data Analytics</a>
-                            <ul class="sub-nav">
-
-                                <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Accounting Record</a></li>
-
-                                <li><a href="#"><i class="fas fa-chart-line"></i> Sales Record</a></li>
-
-                                <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
-
-
-                                <li><a href="#"><i class="fas fa-box-open"></i> Inventory Record</a></li>
-
-                            </ul>
                         </li>
                     <?php endif; ?>
 
@@ -240,7 +228,7 @@
                             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
                             <ul class="sub-nav">
                                 <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
-                                <li><a href="#"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
+                                <li><a href="sales_rep"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
                             </ul>
                         </li>
                     <?php endif; ?>

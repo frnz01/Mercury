@@ -78,12 +78,13 @@
 
     .content {
   margin-left: 280px;
+  margin-right: 50px;
   padding: 20px;
   margin-top: 100px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  width: 1200px;
+  width: 100%;
 }
 
 .product-container {
@@ -299,18 +300,6 @@ function showNavItem($requiredRole, $userRole) {
         <?php if ($userRole === 'Administrator' || $userRole === 'Employee') : ?>
           <li class="nav-item">
             <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Data Analytics</a>
-            <ul class="sub-nav">
-              
-                <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Accounting Record</a></li>
-             
-              <li><a href="#"><i class="fas fa-chart-line"></i> Sales Record</a></li>
-             
-                <li><a href="#"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
-            
-              
-                <li><a href="#"><i class="fas fa-box-open"></i> Inventory Record</a></li>
-             
-            </ul>
           </li>
         <?php endif; ?>
 
@@ -329,7 +318,7 @@ function showNavItem($requiredRole, $userRole) {
             <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
             <ul class="sub-nav">
               <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
-              <li><a href="#"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
+              <li><a href="sales_rep"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
             </ul>
           </li>
         <?php endif; ?>
@@ -402,34 +391,38 @@ function showNavItem($requiredRole, $userRole) {
       </div>
     </div>
     <div class="col-md-4 order-list">
-      <form action="">
-        <input type="text" class="form-control" placeholder="Customer Name" required>
-        <h1>Orders List</h1>
-        <div class="orders">
-          <table class="table table-bordered table-striped receipt-table">
-            <thead class="thead-dark">
-              <tr>
-                <th>Product ID</th>
-                <th>Product Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody id="orders-table-body">
-              <!-- Orders content goes here -->
-            </tbody>
-          </table>
-        </div>
-        <div class="receipt-footer">
-          <div class="total-label">Total:</div>
-          <div class="total-value" id="total-value">0.00</div>
-        </div>
-        <div class="list-footer">
-          <button class="btn btn-primary" type="submit">Pay</button>
-        </div>
-      </form>
+        <form id="order-form" action="<?php echo site_url('poSale/cash_payment'); ?>" method="post">
+          <input type="text" class="form-control" placeholder="Customer Name" name="customer_name" required>
+          <input type="hidden" class="form-control" placeholder="Username" name="username" value="<?php echo $username; ?>" readonly>
+          <h1>Orders List</h1>
+          <div class="orders">
+            <table class="table table-bordered table-striped receipt-table">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Product ID</th>
+                  <th>Product Name</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="orders-table-body">
+                <!-- Orders content goes here -->
+              </tbody>
+            </table>
+          </div>
+          <div class="receipt-footer">
+            <div class="total-label">Total:</div>
+            <div class="total-value" id="total-value">0.00</div><br /><br />
+          </div>
+          <input type="number" class="form-control" placeholder="Amount" name="amount" required>
+          <input type="number" class="form-control" placeholder="Change" name="change" readonly>
+          <div class="list-footer">
+            <button class="btn btn-primary" type="submit">Pay</button><br/><br />
+            <button class="btn btn-primary" type="submit">Card</button>
+          </div>
+        </form>
     </div>
   </div>
 </div>
@@ -481,79 +474,178 @@ function showNavItem($requiredRole, $userRole) {
     }
   });
 </script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-  $(document).ready(function() {
-    var originalTable = $('#product-table tbody').html(); // Store the original table HTML
-    var orders = []; // Array to store the orders
+$(document).ready(function() {
+  var originalTable = $('#product-table tbody').html(); // Store the original table HTML
+  var orders = []; // Array to store the orders
 
-    // Handle add button click
-    $('.add-button').click(function() {
-      var productId = $(this).data('product-id');
-      var productName = $(this).data('product-name');
-      var productPrice = $(this).data('product-price');
-      var quantity = 1;
-      var totalPrice = productPrice * quantity;
-      var order = {
-        productId: productId,
-        productName: productName,
-        productPrice: productPrice,
-        quantity: quantity,
-        totalPrice: totalPrice
-      };
-      orders.push(order); // Add the order to the orders array
+  // Handle add button click
+  $('.add-button').click(function() {
+    var productId = $(this).data('product-id');
+    var productName = $(this).data('product-name');
+    var productPrice = $(this).data('product-price');
+    var quantity = 1;
+    var totalPrice = productPrice * quantity;
+    var order = {
+      productId: productId,
+      productName: productName,
+      productPrice: productPrice,
+      quantity: quantity,
+      totalPrice: totalPrice
+    };
+    orders.push(order); // Add the order to the orders array
+    updateOrders(); // Update the orders list
+    calculateChange(); // Calculate and update the change value
+  });
+
+  // Handle order quantity change
+  $(document).on('change', '.order-quantity', function() {
+    var index = $(this).data('order-index');
+    var newQuantity = parseInt($(this).val());
+    if (!isNaN(newQuantity) && newQuantity > 0) {
+      orders[index].quantity = newQuantity;
+      orders[index].totalPrice = orders[index].productPrice * newQuantity;
       updateOrders(); // Update the orders list
-    });
-
-    // Handle order quantity change
-    $(document).on('change', '.order-quantity', function() {
-      var index = $(this).data('order-index');
-      var newQuantity = parseInt($(this).val());
-      if (!isNaN(newQuantity) && newQuantity > 0) {
-        orders[index].quantity = newQuantity;
-        orders[index].totalPrice = orders[index].productPrice * newQuantity;
-        updateOrders(); // Update the orders list
-      }
-    });
-
-    // Handle order removal
-    $(document).on('click', '.remove-order', function() {
-      var index = $(this).data('order-index');
-      orders.splice(index, 1); // Remove the order from the orders array
-      updateOrders(); // Update the orders list
-    });
-
-    // Function to update the orders list
-    function updateOrders() {
-      var ordersTableBody = $('#orders-table-body');
-      ordersTableBody.empty(); // Clear the orders table body
-
-      var total = 0; // Variable to calculate the overall total
-
-      if (orders.length === 0) {
-        ordersTableBody.append('<tr><td colspan="6" class="text-center">No orders</td></tr>');
-      } else {
-        for (var i = 0; i < orders.length; i++) {
-          var order = orders[i];
-          var orderRow = '<tr>' +
-            '<td>' + order.productId + '</td>' +
-            '<td>' + order.productName + '</td>' +
-            '<td>' + order.productPrice + '</td>' +
-            '<td><input type="number" class="form-control order-quantity" data-order-index="' + i + '" value="' + order.quantity + '"></td>' +
-            '<td>' + order.totalPrice + '</td>' +
-            '<td><button class="btn btn-danger btn-sm remove-order" data-order-index="' + i + '"> <i class="fas fa-trash-alt"></i></button></td>' +
-            '</tr>';
-          ordersTableBody.append(orderRow);
-          total += order.totalPrice;
-        }
-      }
-
-      // Update the overall total value
-      $('#total-value').text(total.toFixed(2));
+      calculateChange(); // Calculate and update the change value
     }
   });
+
+  // Handle order removal
+  $(document).on('click', '.remove-order', function() {
+    var index = $(this).data('order-index');
+    orders.splice(index, 1); // Remove the order from the orders array
+    updateOrders(); // Update the orders list
+    calculateChange(); // Calculate and update the change value
+  });
+
+  // Handle form submission
+  $('#order-form').submit(function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Retrieve form values
+    var customerName = $('[name="customer_name"]').val();
+    var username = $('[name="username"]').val();
+    var amount = parseFloat($('[name="amount"]').val());
+    var change = parseFloat($('[name="change"]').val());
+
+    // Create an array to store the order details
+    var orderDetails = [];
+    for (var i = 0; i < orders.length; i++) {
+      var order = orders[i];
+      var orderDetail = {
+        p_id: order.productId,
+        quantity: order.quantity,
+        total: order.totalPrice
+      };
+      orderDetails.push(orderDetail);
+    }
+
+    // Create an object to hold the form data
+    var formData = {
+      customer_name: customerName,
+      username: username,
+      amount: amount,
+      change: change,
+      orderDetails: orderDetails,
+      overallTotal: parseFloat($('#total-value').text())
+    };
+
+   // Send the form data via AJAX
+   $.ajax({
+  url: $(this).attr('action'),
+  type: 'POST',
+  dataType: 'json',
+  data: formData,
+  success: function(response) {
+    // Handle the response from the server
+    if (response.status === 'success') {
+      // Payment successful
+      alert(response.message);
+      // Reset the form
+      $('#order-form')[0].reset();
+      orders = [];
+      updateOrders();
+      calculateChange();
+    } else {
+      // Payment failed
+      console.log('Payment failed. Please try again.'); // Print the error message in the console
+      // Reset the form
+      $('#order-form')[0].reset();
+      orders = [];
+      updateOrders();
+      calculateChange();
+    }
+  },
+  error: function() {
+    // Error handling
+    console.log('An error occurred. Please try again.'); // Print the error message in the console
+  }
+});
+
+  });
+
+  // Calculate and update the change value
+  function calculateChange() {
+    var amount = parseFloat($('[name="amount"]').val());
+    var total = parseFloat($('#total-value').text());
+
+    if (isNaN(amount)) {
+      $('[name="change"]').val(''); // Clear the change field
+    } else if (!isNaN(total)) {
+      var change = amount - total;
+      $('[name="change"]').val(change.toFixed(2));
+    }
+  }
+
+  // Add event listener to the amount input field
+  $('[name="amount"]').on('input', function() {
+    calculateChange(); // Recalculate the change
+    var change = parseFloat($('[name="change"]').val());
+    var payButton = $('.list-footer button[type="submit"]');
+    if (change < 0) {
+      payButton.prop('disabled', true); // Disable the Pay button
+    } else {
+      payButton.prop('disabled', false); // Enable the Pay button
+    }
+  });
+
+  // Function to update the orders list
+  function updateOrders() {
+    var ordersTableBody = $('#orders-table-body');
+    ordersTableBody.empty(); // Clear the orders table body
+
+    var total = 0; // Variable to calculate the overall total
+
+    if (orders.length === 0) {
+      ordersTableBody.append('<tr><td colspan="6" class="text-center">No orders</td></tr>');
+    } else {
+      for (var i = 0; i < orders.length; i++) {
+        var order = orders[i];
+        var orderRow = '<tr>' +
+          '<td>' + order.productId + '</td>' +
+          '<td>' + order.productName + '</td>' +
+          '<td>' + order.productPrice + '</td>' +
+          '<td><input type="number" class="form-control order-quantity" data-order-index="' + i + '" value="' + order.quantity + '"></td>' +
+          '<td>' + order.totalPrice + '</td>' +
+          '<td><button class="btn btn-danger btn-sm remove-order" data-order-index="' + i + '"> <i class="fas fa-trash-alt"></i></button></td>' +
+          '</tr>';
+        ordersTableBody.append(orderRow);
+        total += order.totalPrice;
+      }
+    }
+
+    // Update the overall total value
+    $('#total-value').text(total.toFixed(2));
+  }
+
+  // Calculate and update the change value when the amount input changes
+  $('[name="amount"]').on('input', calculateChange);
+});
+
 </script>
+
+
 
 </body>
 
