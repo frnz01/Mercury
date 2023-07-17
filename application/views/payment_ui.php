@@ -197,19 +197,15 @@
         <nav class="sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="dashboard"><i class="fas fa-user"></i> Dashboard</a>
-                    </li>
+                <?php if ($userRole === 'Administrator') : ?>
+        <li class="nav-item">
+          <a class="nav-link active" href="dashboard"><i class="fas fa-user"></i> Dashboard</a>
+        </li>
+        <?php endif; ?>
 
                     <?php if ($userRole === 'Administrator') : ?>
                         <li class="nav-item">
                             <a class="nav-link" href="user"><i class="fas fa-users"></i> Manage Users</a>
-                        </li>
-                    <?php endif; ?>
-
-                    <?php if ($userRole === 'Administrator' || $userRole === 'Employee') : ?>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-chart-bar"></i> Data Analytics</a>
                         </li>
                     <?php endif; ?>
 
