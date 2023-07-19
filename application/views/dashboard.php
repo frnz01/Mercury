@@ -1,30 +1,3 @@
-<?php
- 
-$dataPoints = array(
-	array("label"=> 1997, "y"=> 254722.1),
-	array("label"=> 1998, "y"=> 292175.1),
-	array("label"=> 1999, "y"=> 369565),
-	array("label"=> 2000, "y"=> 284918.9),
-	array("label"=> 2001, "y"=> 325574.7),
-	array("label"=> 2002, "y"=> 254689.8),
-	array("label"=> 2003, "y"=> 303909),
-	array("label"=> 2004, "y"=> 335092.9),
-	array("label"=> 2005, "y"=> 408128),
-	array("label"=> 2006, "y"=> 300992.2),
-	array("label"=> 2007, "y"=> 401911.5),
-	array("label"=> 2008, "y"=> 299009.2),
-	array("label"=> 2009, "y"=> 319814.4),
-	array("label"=> 2010, "y"=> 357303.9),
-	array("label"=> 2011, "y"=> 353838.9),
-	array("label"=> 2012, "y"=> 288386.5),
-	array("label"=> 2013, "y"=> 485058.4),
-	array("label"=> 2014, "y"=> 326794.4),
-	array("label"=> 2015, "y"=> 483812.3),
-	array("label"=> 2016, "y"=> 254484)
-);
-	
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +11,12 @@ $dataPoints = array(
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Add these scripts in the <head> section of your HTML file -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 
   <!-- Custom CSS -->
   <style>
@@ -191,58 +170,68 @@ $dataPoints = array(
     .sub-nav li a i {
       margin-right: 10px;
     }
+
+    .filter-controls input[type="date"] {
+      /* Add your preferred styling for the date picker here */
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
-<script>
-window.onload = function () {
- 
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	//theme: "light2",
-	title:{
-		text: "Salmon Production - 1997 to 2006"
-	},
-	axisX:{
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true
-		}
-	},
-	axisY:{
-		title: "in Metric Tons",
-		includeZero: true,
-		crosshair: {
-			enabled: true,
-			snapToDataPoint: true
-		}
-	},
-	toolTip:{
-		enabled: false
-	},
-	data: [{
-		type: "area",
-		dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
-	}]
-});
-chart.render();
- 
-}
-</script>
+  <script>
+    window.onload = function() {
+      var salesData = <?php echo json_encode($sales, JSON_NUMERIC_CHECK); ?>;
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        //theme: "light2",
+        title: {
+          text: "Sales Report - July 2023"
+        },
+        axisX: {
+          title: "Date",
+          valueFormatString: "YYYY-MM-DD",
+          crosshair: {
+            enabled: true,
+            snapToDataPoint: true
+          }
+        },
+        axisY: {
+          title: "Total Amount",
+          includeZero: true,
+          crosshair: {
+            enabled: true,
+            snapToDataPoint: true
+          }
+        },
+        toolTip: {
+          content: "Date: {x} <br/> Total Amount: {y}"
+        },
+        data: [{
+          type: "area",
+          xValueType: "dateTime",
+          dataPoints: salesData
+        }]
+      });
+      chart.render();
+    }
+  </script>
 
 </head>
 
 <body>
 
-<?php
-// Retrieve the username and user role from the session
-$userData = $this->session->userdata('user');
-$username = isset($userData['username']) ? $userData['username'] : '';
-$userRole = isset($userData['user_role']) ? $userData['user_role'] : '';
+  <?php
+  // Retrieve the username and user role from the session
+  $userData = $this->session->userdata('user');
+  $username = isset($userData['username']) ? $userData['username'] : '';
+  $userRole = isset($userData['user_role']) ? $userData['user_role'] : '';
 
-// Function to check if a navigation item should be displayed based on user role
-function showNavItem($requiredRole, $userRole) {
-  return $requiredRole === 'Administrator' || $requiredRole === $userRole;
-}
-?>
+  // Function to check if a navigation item should be displayed based on user role
+  function showNavItem($requiredRole, $userRole)
+  {
+    return $requiredRole === 'Administrator' || $requiredRole === $userRole;
+  }
+  ?>
 
   <nav class="navbar">
     <a href="#" class="navbar-brand">
@@ -254,73 +243,85 @@ function showNavItem($requiredRole, $userRole) {
     </div>
   </nav>
 
-      <div class="d-flex">
-  <nav class="sidebar">
-    <div class="sidebar-sticky">
-      <ul class="nav flex-column">
-        <?php if ($userRole === 'Administrator') : ?>
-        <li class="nav-item">
-          <a class="nav-link active" href="dashboard"><i class="fas fa-user"></i> Dashboard</a>
-        </li>
-        <?php endif; ?>
+  <div class="d-flex">
+    <nav class="sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <?php if ($userRole === 'Administrator') : ?>
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard"><i class="fas fa-user"></i> Dashboard</a>
+            </li>
+          <?php endif; ?>
 
-        <?php if ($userRole === 'Administrator') : ?>
-          <li class="nav-item">
-            <a class="nav-link" href="user"><i class="fas fa-users"></i> Manage Users</a>
-          </li>
-        <?php endif; ?>
+          <?php if ($userRole === 'Administrator') : ?>
+            <li class="nav-item">
+              <a class="nav-link" href="user"><i class="fas fa-users"></i> Manage Users</a>
+            </li>
+          <?php endif; ?>
 
-        <?php if ($userRole === 'Administrator' || $userRole === 'Accountant') : ?>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Accounting</a>
-            <ul class="sub-nav">
-              <li><a href="payment"><i class="fas fa-credit-card"></i> Payment</a></li>
-              <li><a href="f_record"><i class="fas fa-file-alt"></i> Financial Records</a></li>
-            </ul>
-          </li>
-        <?php endif; ?>
+          <?php if ($userRole === 'Administrator' || $userRole === 'Accountant') : ?>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-calculator"></i> Accounting</a>
+              <ul class="sub-nav">
+                <li><a href="payment"><i class="fas fa-credit-card"></i> Payment</a></li>
+                <li><a href="f_record"><i class="fas fa-file-alt"></i> Financial Records</a></li>
+              </ul>
+            </li>
+          <?php endif; ?>
 
-        <?php if ($userRole === 'Administrator' || $userRole === 'Cashier') : ?>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
-            <ul class="sub-nav">
-              <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
-              <li><a href="sales_rep"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
-            </ul>
-          </li>
-        <?php endif; ?>
+          <?php if ($userRole === 'Administrator' || $userRole === 'Cashier') : ?>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Sales Management</a>
+              <ul class="sub-nav">
+                <li><a href="poSale"><i class="fas fa-cash-register"></i> Point of Sale</a></li>
+                <li><a href="sales_rep"><i class="fas fa-file-invoice"></i> Sales Record</a></li>
+              </ul>
+            </li>
+          <?php endif; ?>
 
-        <?php if ($userRole === 'Administrator' || $userRole === 'Pharmacist') : ?>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Purchase Management</a>
-            <ul class="sub-nav">
-              <li><a href="purchase"><i class="fas fa-tasks"></i> Manage Purchase</a></li>
-             
+          <?php if ($userRole === 'Administrator' || $userRole === 'Pharmacist') : ?>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Purchase Management</a>
+              <ul class="sub-nav">
+                <li><a href="purchase"><i class="fas fa-tasks"></i> Manage Purchase</a></li>
+
                 <li><a href="p_record"><i class="fas fa-file-invoice"></i> Purchase Record</a></li>
-        
-            </ul>
-          </li>
-        <?php endif; ?>
 
-        <?php if ($userRole === 'Administrator' || $userRole === 'Pharmacist') : ?>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-boxes"></i> Inventory Management</a>
-            <ul class="sub-nav">
-              <li><a href="n_arrival"><i class="fas fa-box"></i> New Arrivals</a></li>
-              <li><a href="product"><i class="fas fa-cogs"></i>All Products</a></li>
-            </ul>
-          </li>
-        <?php endif; ?>
-      </ul>
-    </div>
- 
+              </ul>
+            </li>
+          <?php endif; ?>
+
+          <?php if ($userRole === 'Administrator' || $userRole === 'Pharmacist') : ?>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fas fa-boxes"></i> Inventory Management</a>
+              <ul class="sub-nav">
+                <li><a href="n_arrival"><i class="fas fa-box"></i> New Arrivals</a></li>
+                <li><a href="product"><i class="fas fa-cogs"></i>All Products</a></li>
+              </ul>
+            </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+
 
 
     </nav>
 
+
     <div class="content">
+      <!-- <div class="filter-controls">
+        <label for="selectedView">Select View:</label>
+        <select id="selectedView">
+          <option value="day" selected>Day</option>
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+          <option value="year">Year</option>
+        </select>
+      </div> -->
+
       <div id="chartContainer" style="height: 370px; width: 100%;"></div>
       <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
     </div>
   </div>
 

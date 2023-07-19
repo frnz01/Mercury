@@ -57,12 +57,24 @@ class Sale_Model extends CI_model{
 
       }
 
-      public function getRecords(){
-        $this->db->select('*');
+      public function getSales() {
+        $this->db->select('date, total_amount');
         $this->db->from('sales_report');
+        $this->db->like('date', '2023-07', 'after'); // Filter data for the month of July 2023
         $query = $this->db->get();
-        return $query->result();
-      }
+    
+        $dataPoints = array();
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $date = strtotime($row->date) * 1000; // Convert date to milliseconds
+                $total_amount = (float) $row->total_amount;
+                $dataPoints[] = array("x" => $date, "y" => $total_amount);
+            }
+        }
+    
+        return $dataPoints;
+    }
+    
 
 }
 ?>
